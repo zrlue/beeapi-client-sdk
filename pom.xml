@@ -4,9 +4,21 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.bee</groupId>
     <artifactId>beeapi-client-sdk</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <name>beeapi-client-sdk</name>
-    <description>Demo project for Spring Boot</description>
+    <description>BeeApi 接口开放平台开发者工具包</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -38,6 +50,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <!--  用来获取反序列时未匹配上的字段  -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.3.1</version>
         </dependency>
         <!-- 公共类  -->
         <dependency>
